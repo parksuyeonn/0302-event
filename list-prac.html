@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <ul id="menu">
+      <li>items-1</li>
+      <li>items-2</li>
+      <li>items-3</li>
+      <li>items-4</li>
+      <li>items-5</li>
+    </ul>
+  </div>
+  <script>
+    const menu = document.getElementById('menu');
+    const firstLi = document.querySelector('#menu > li:nth-child(1)');  
+    //querySelector는 css방식
+    console.log(firstLi);
+    console.dir(menu.children);
+
+
+    // menu.children[0].style.color = "pink";
+    // menu.children[1].style.color = "pink";
+    // menu.children[2].style.color = "pink";
+    // menu.children[3].style.color = "pink";
+    // menu.children[4].style.color = "pink";
+
+  
+
+    for(let i = 0; i < menu.children.length; i++){
+      menu.children[i].style.color = "pink";
+      // menu.children[i].addEventListener('click', function(){
+      //   menu.children[i].style.color = "cadetblue";
+      // });
+      if(i == 2){
+        menu.children[i].addEventListener('click', function(){
+        menu.children[i].style.color = "yellow";
+      });
+    }else {
+      menu.children[i].addEventListener('click', function(){
+        menu.children[i].style.color = "cadetblue";
+        });
+      }
+    }
+
+
+    //정적
+    // menu.children[1].addEventListener('click', function(){
+    //   menu.children[1].style.color = "cadetblue";
+    // });
+    // menu.children[2].addEventListener('click', function(){
+    //   menu.children[2].style.color = "cadetblue";
+    // });
+    // menu.children[3].addEventListener('click', function(){
+    //   menu.children[3].style.color = "cadetblue";
+    // });
+    // menu.children[4].addEventListener('click', function(){
+    //   menu.children[4].style.color = "cadetblue";
+    // });
+    // menu.children[5].addEventListener('click', function(){
+    //   menu.children[5].style.color = "cadetblue";
+    // });
+
+  </script>
+</body>
+
+</html>
